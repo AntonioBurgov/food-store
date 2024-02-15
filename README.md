@@ -49,3 +49,6 @@
       2. Add ts
       3. Add html
       4. Add css
+
+have to fix the stars
+have to fix the tags menu

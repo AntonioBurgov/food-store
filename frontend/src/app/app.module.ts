@@ -9,6 +9,7 @@ import { RatingModule } from 'primeng/rating';
 import { SearchComponent } from './components/partials/search/search.component';
 import { TagsComponent } from './components/partials/tags/tags.component';
 import { FoodPageComponent } from './components/page/food-page/food-page.component';
+import { CartPageComponent } from './components/pages/cart-page/cart-page.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { FoodPageComponent } from './components/page/food-page/food-page.compone
     SearchComponent,
     TagsComponent,
     FoodPageComponent,
+    CartPageComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, RatingModule],
   providers: [],

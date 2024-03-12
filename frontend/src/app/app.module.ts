@@ -15,6 +15,8 @@ import { NotFoundComponent } from './components/partials/not-found/not-found.com
 import { HttpClientModule } from '@angular/common/http';
 import { LoginPageComponent } from './components/pages/login-page/login-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { InputContainerComponent } from './components/partials/input-container/input-container.component';
+import { InputValidationComponent } from './components/partials/input-validation/input-validation.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     TitleComponent,
     NotFoundComponent,
     LoginPageComponent,
+    InputContainerComponent,
+    InputValidationComponent,
   ],
   imports: [
     BrowserModule,

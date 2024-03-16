@@ -17,6 +17,8 @@ import { LoginPageComponent } from './components/pages/login-page/login-page.com
 import { ReactiveFormsModule } from '@angular/forms';
 import { InputContainerComponent } from './components/partials/input-container/input-container.component';
 import { InputValidationComponent } from './components/partials/input-validation/input-validation.component';
+import { CommonModule } from '@angular/common';
+import { DefaultButtonComponent } from './components/partials/default-button/default-button.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,7 @@ import { InputValidationComponent } from './components/partials/input-validation
     LoginPageComponent,
     InputContainerComponent,
     InputValidationComponent,
+    DefaultButtonComponent,
   ],
   imports: [
     BrowserModule,

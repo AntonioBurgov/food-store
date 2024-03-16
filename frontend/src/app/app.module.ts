@@ -23,6 +23,8 @@ import { TextInputComponent } from './components/partials/text-input/text-input.
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterPageComponent } from './components/pages/register-page/register-page.component';
+import { CheckoutPageComponent } from './components/pages/checkout-page/checkout-page.component';
+import { OrderItemsListComponent } from './components/partials/order-items-list/order-items-list.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +43,8 @@ import { RegisterPageComponent } from './components/pages/register-page/register
     DefaultButtonComponent,
     TextInputComponent,
     RegisterPageComponent,
+    CheckoutPageComponent,
+    OrderItemsListComponent,
   ],
   imports: [
     BrowserModule,

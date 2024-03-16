@@ -20,6 +20,8 @@ import { InputValidationComponent } from './components/partials/input-validation
 import { CommonModule } from '@angular/common';
 import { DefaultButtonComponent } from './components/partials/default-button/default-button.component';
 import { TextInputComponent } from './components/partials/text-input/text-input.component';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -40,11 +42,17 @@ import { TextInputComponent } from './components/partials/text-input/text-input.
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     RatingModule,
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
+    ToastrModule.forRoot({
+      timeOut: 3000,
+      positionClass: 'toast-bottom-right',
+      newestOnTop: false,
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],

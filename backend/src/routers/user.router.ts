@@ -5,7 +5,6 @@ import asyncHandler from "express-async-handler";
 import { User, UserModel } from "../models/user.model";
 import { HTTP_BAD_REQUEST } from "../constants/http_status";
 import bcrypt from "bcryptjs";
-
 const router = Router();
 
 router.get(
@@ -26,9 +25,9 @@ router.post(
   "/login",
   asyncHandler(async (req, res) => {
     const { email, password } = req.body;
-    const user = await UserModel.findOne({ email, password });
+    const user = await UserModel.findOne({ email });
 
-    if (user) {
+    if (user && (await bcrypt.compare(password, user.password))) {
       res.send(generateTokenReponse(user));
     } else {
       res.status(HTTP_BAD_REQUEST).send("Username or password is invalid!");

@@ -1,6 +1,6 @@
-import { model, Schema, Types } from 'mongoose';
-import { OrderStatus } from '../constants/order_status';
-import { Food, FoodSchema } from '../../../../../backend/src/models/food.model';
+import { model, Schema, Types } from "mongoose";
+import { OrderStatus } from "../constants/order_status";
+import { Food, FoodSchema } from "./food.model";
 
 export interface LatLng {
   lat: string;
@@ -60,4 +60,4 @@ const orderSchema = new Schema<Order>(
   }
 );
 
-export const OrderModel = model('order', orderSchema);
+export const OrderModel = model("order", orderSchema);

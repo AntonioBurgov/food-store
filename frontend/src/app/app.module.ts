@@ -28,6 +28,7 @@ import { PaypalButtonComponent } from './components/partials/paypal-button/paypa
 import { OrderTrackPageComponent } from './components/pages/order-track-page/order-track-page.component';
 import { StarRatingComponent } from './components/partials/star-rating/star-rating.component';
 import { AuthInterceptor } from './auth/guards/auth.interceptor';
+import { LoadingComponent } from './components/partials/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { AuthInterceptor } from './auth/guards/auth.interceptor';
     TextInputComponent,
     DefaultButtonComponent,
     RegisterPageComponent,
+    LoadingComponent,
     CheckoutPageComponent,
     OrderItemsListComponent,
     MapComponent,

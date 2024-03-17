@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UserService } from '../../../services/user.service';
-import { IUserRegister } from '../../../shared/interfaces/IUserRegister';
 import { PasswordsMatchValidator } from '../../../shared/validators/password_match_validator';
+import { IUserRegister } from '../../../shared/interfaces/IUserRegister';
 
 @Component({
   selector: 'app-register-page',

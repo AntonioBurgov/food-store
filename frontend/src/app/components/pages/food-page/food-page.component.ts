@@ -1,17 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { Food } from '../../../shared/models/Food';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FoodService } from '../../../services/food.service';
 import { CartService } from '../../../services/cart.service';
+import { Food } from '../../../shared/models/Food';
 
 @Component({
   selector: 'app-food-page',
   templateUrl: './food-page.component.html',
-  styleUrl: './food-page.component.css',
+  styleUrls: ['./food-page.component.css'],
 })
 export class FoodPageComponent implements OnInit {
   food!: Food;
-
   constructor(
     activatedRoute: ActivatedRoute,
     foodService: FoodService,
@@ -19,13 +18,13 @@ export class FoodPageComponent implements OnInit {
     private router: Router
   ) {
     activatedRoute.params.subscribe((params) => {
-      if (params.id) {
+      if (params.id)
         foodService.getFoodById(params.id).subscribe((serverFood) => {
           this.food = serverFood;
         });
-      }
     });
   }
+
   ngOnInit(): void {}
 
   addToCart() {

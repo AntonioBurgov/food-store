@@ -1,9 +1,7 @@
 <app-search></app-search>
 <app-tags></app-tags>
-<app-not-found
-  [visible]="!foods || !foods.length"
-  resetLinkText="Reset Search"
-></app-not-found>
+<app-not-found [visible]="!foods || !foods.length" resetLinkText="Reset Search">
+</app-not-found>
 <ul>
   <li *ngFor="let food of foods">
     <a routerLink="/food/{{ food.id }}">
@@ -14,13 +12,7 @@
         </div>
         <span class="favorite {{ food.favorite ? '' : 'not' }}"> ❤ </span>
         <div class="stars">
-          <p-rating
-            (ngModel)="(food.stars)"
-            [stars]="5"
-            [readonly]="true"
-            iconOn="pi pi-star"
-            iconOff="pi pi-star-o"
-          ></p-rating>
+          <star-rating [stars]="food.stars" />
         </div>
         <div class="product-item-footer">
           <div class="origins">

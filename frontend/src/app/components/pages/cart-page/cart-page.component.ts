@@ -1,14 +1,14 @@
-import { Component } from '@angular/core';
-import { Cart } from '../../../shared/models/Cart';
+import { Component, OnInit } from '@angular/core';
 import { CartService } from '../../../services/cart.service';
+import { Cart } from '../../../shared/models/Cart';
 import { CartItem } from '../../../shared/CartItem';
 
 @Component({
   selector: 'app-cart-page',
   templateUrl: './cart-page.component.html',
-  styleUrl: './cart-page.component.css',
+  styleUrls: ['./cart-page.component.css'],
 })
-export class CartPageComponent {
+export class CartPageComponent implements OnInit {
   cart!: Cart;
   constructor(private cartService: CartService) {
     this.cartService.getCartObservable().subscribe((cart) => {
@@ -16,12 +16,14 @@ export class CartPageComponent {
     });
   }
 
+  ngOnInit(): void {}
+
   removeFromCart(cartItem: CartItem) {
     this.cartService.removeFromCart(cartItem.food.id);
   }
 
-  changeQuantity(cartItem: CartItem, quantityString: string) {
-    const quantity = parseInt(quantityString);
+  changeQuantity(cartItem: CartItem, quantityInString: string) {
+    const quantity = parseInt(quantityInString);
     this.cartService.changeQuantity(cartItem.food.id, quantity);
   }
 }

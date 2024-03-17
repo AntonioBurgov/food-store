@@ -1,4 +1,4 @@
-import { Food } from './models/Food';
+import { Food } from './Food';
 
 export class CartItem {
   constructor(public food: Food) {}

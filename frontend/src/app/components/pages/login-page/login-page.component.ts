@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { UserService } from '../../../services/user.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { UserService } from '../../../services/user.service';
 
 @Component({
   selector: 'app-login-page',
   templateUrl: './login-page.component.html',
-  styleUrl: './login-page.component.css',
+  styleUrls: ['./login-page.component.css'],
 })
 export class LoginPageComponent implements OnInit {
   loginForm!: FormGroup;
@@ -27,6 +27,7 @@ export class LoginPageComponent implements OnInit {
 
     this.returnUrl = this.activatedRoute.snapshot.queryParams.returnUrl;
   }
+
   get fc() {
     return this.loginForm.controls;
   }
@@ -36,10 +37,7 @@ export class LoginPageComponent implements OnInit {
     if (this.loginForm.invalid) return;
 
     this.userService
-      .login({
-        email: this.fc.email.value,
-        password: this.fc.password.value,
-      })
+      .login({ email: this.fc.email.value, password: this.fc.password.value })
       .subscribe(() => {
         this.router.navigateByUrl(this.returnUrl);
       });

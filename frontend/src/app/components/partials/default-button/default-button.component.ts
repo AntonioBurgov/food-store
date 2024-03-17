@@ -18,7 +18,6 @@ export class DefaultButtonComponent implements OnInit {
   fontSizeRem = 1.3;
   @Input()
   widthRem = 12;
-
   @Output()
   onClick = new EventEmitter();
   constructor() {}

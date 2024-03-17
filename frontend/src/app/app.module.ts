@@ -29,6 +29,7 @@ import { OrderTrackPageComponent } from './components/pages/order-track-page/ord
 import { StarRatingComponent } from './components/partials/star-rating/star-rating.component';
 import { AuthInterceptor } from './auth/guards/auth.interceptor';
 import { LoadingComponent } from './components/partials/loading/loading.component';
+import { LoadingInterceptor } from './shared/interceptors/loading.interceptor';
 
 @NgModule({
   declarations: [
@@ -70,6 +71,7 @@ import { LoadingComponent } from './components/partials/loading/loading.componen
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true },
   ],
   bootstrap: [AppComponent],
 })

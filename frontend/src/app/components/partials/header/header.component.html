@@ -19,6 +19,10 @@
             Cart <span *ngIf="cartQuantity">{{ cartQuantity }}</span>
           </a>
         </li>
+        <!-- Add the "Create Food" button here -->
+        <li *ngIf="isAuth">
+          <a routerLink="/create-food">Create Food</a>
+        </li>
       </ul>
     </nav>
   </div>

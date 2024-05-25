@@ -30,6 +30,7 @@ import { StarRatingComponent } from './components/partials/star-rating/star-rati
 import { AuthInterceptor } from './auth/guards/auth.interceptor';
 import { LoadingComponent } from './components/partials/loading/loading.component';
 import { LoadingInterceptor } from './shared/interceptors/loading.interceptor';
+import { CreateFoodComponent } from './components/pages/create-food/create-food.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { LoadingInterceptor } from './shared/interceptors/loading.interceptor';
     PaypalButtonComponent,
     OrderTrackPageComponent,
     StarRatingComponent,
+    CreateFoodComponent,
   ],
   imports: [
     BrowserModule,

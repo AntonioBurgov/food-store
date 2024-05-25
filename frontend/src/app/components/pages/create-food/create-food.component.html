@@ -1,0 +1,23 @@
+<div class="form-container">
+  <form [formGroup]="createFoodForm" (ngSubmit)="onSubmit()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" formControlName="name" />
+
+    <label for="imageUrl">Image URL:</label>
+    <input type="text" id="imageUrl" formControlName="imageUrl" />
+
+    <label for="stars">Stars:</label>
+    <input type="number" id="stars" formControlName="stars" />
+
+    <label for="origins">Origins:</label>
+    <input type="text" id="origins" formControlName="origins" />
+
+    <label for="cookTime">Cook Time:</label>
+    <input type="text" id="cookTime" formControlName="cookTime" />
+
+    <label for="price">Price:</label>
+    <input type="text" id="price" formControlName="price" />
+
+    <button type="submit">Create Food</button>
+  </form>
+</div>
